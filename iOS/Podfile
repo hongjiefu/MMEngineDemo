@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+#source 'https://git.wemomo.com/base/Specs.git'
+#source 'https://git.wemomo.com/next/Specs.git'
+source 'https://github.com/cosmos33/MMSpecs.git'
+
+platform :ios, '11.0'
+
+install! 'cocoapods',
+:deterministic_uuids => false,
+:share_schemes_for_development_pods => true,
+:generate_multiple_pod_projects => true
+
+target 'EngineDemoiOS' do
+  pod 'MMXEngine', '4.4.7.20210125.1445'
+end
