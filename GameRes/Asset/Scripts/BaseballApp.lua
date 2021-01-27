@@ -27,6 +27,13 @@ function App.onStart()
 
         ONLINE_LOG("Romve Self.")
 
+        
+        local ret = {
+            score = score
+        }
+
+        xe.ScriptBridge:call("GameHandler", "onGameOver", xjson.encode(ret))
+
         -- if xe.Director:GetInstance():GetTopScene() == App.mainScene then
         --     ONLINE_LOG("PopScene")
         --     App.mainScene = nil
